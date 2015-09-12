@@ -42,21 +42,33 @@
 
 ;;; Code:
 
-;;(require 'dash)
+(require 'custom)
+(require 'dash)
 (require 'flycheck)
 (require 'moe-theme)
 
-;; Default themes
-(defvar-local moe-flycheck-mode-line-error 'red
-  "Mode line color theme for flycheck errors.")
-(defvar-local moe-flycheck-mode-line-warning 'orange
-  "Mode line color theme for flycheck warnings.")
-(defvar-local moe-flycheck-mode-line-info 'blue
-  "Mode line color theme for flycheck info.")
-(defvar-local moe-flycheck-mode-line-default 'green
-  "Mode line color theme for flycheck default/no-error.")
-(defvar-local moe-flycheck-mode-line-check-failed 'purple
-  "Mode line color theme for flycheck failed checks.")
+;; Customization
+(defun moe-flycheck-mode-line-customize ()
+  "Open the customization group for the `moe-flycheck-mode-line' package."
+  (interactive)
+  (customize-group 'moe-flycheck-mode-line t))
+
+;; Default values
+(defcustom moe-flycheck-mode-line-error 'red
+  "Mode line color theme for flycheck errors."
+  :group 'moe-flycheck-mode-line)
+(defcustom moe-flycheck-mode-line-warning 'orange
+  "Mode line color theme for flycheck warnings."
+  :group 'moe-flycheck-mode-line)
+(defcustom moe-flycheck-mode-line-info 'blue
+  "Mode line color theme for flycheck info."
+  :group 'moe-flycheck-mode-line)
+(defcustom moe-flycheck-mode-line-default 'green
+  "Mode line color theme for flycheck default/no-error."
+  :group 'moe-flycheck-mode-line)
+(defcustom moe-flycheck-mode-line-check-failed 'purple
+  "Mode line color theme for flycheck failed checks."
+  :group 'moe-flycheck-mode-line)
 
 (defun moe-flycheck-mode-line-reset ()
   "Reset the mode line theme."
