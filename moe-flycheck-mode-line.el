@@ -36,14 +36,11 @@
 ;;
 ;; Thanks go to:
 ;; - Sylvain Benner (syl20bnr) for the idea and code, which I shamelessly stole
-;; - Thomas Järvstrand (tjarvstrand) for the initial code from the excellent
-;;   EDTS package
-;; - Sebastian Wiesner (lunaryorn) for flycheck and his awesome support.
+;; from his flycheck-color-mode-line mode
+;; - hiroko (kuanyui) for moe-theme, the best emacs theme ever!
 
 ;;; Code:
 
-(require 'custom)
-(require 'dash)
 (require 'flycheck)
 (require 'moe-theme)
 
